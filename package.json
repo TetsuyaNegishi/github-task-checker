@@ -1,0 +1,23 @@
+{
+    "name": "pull-request-task-checker",
+    "version": "1.0.0",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.18.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.9.0",
+        "uglifyjs-webpack-plugin": "^1.2.2",
+        "webpack": "^3.11.0",
+        "webpack-node-externals": "^1.6.0"
+    },
+    "scripts": {
+        "build": "webpack && npm run build:zip",
+        "build:zip": "rm -f Lambda.zip && zip Lambda.zip index.js"
+    },
+    "dependencies": {
+        "axios": "^0.18.0"
+    }
+}
